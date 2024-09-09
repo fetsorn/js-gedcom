@@ -1,0 +1,19 @@
+{
+  "name": "@fetsorn/js-gedcom",
+  "description": "Parser, serializer, type-checker, and validator for GEDCOM generally and v7 in particular",
+  "version": "0.0.1",
+  "author": "Luther Tychonievich",
+  "license": "MIT",
+  "exports": "./src/index.js",
+  "type": "module",
+  "files": [
+    "src/"
+  ],
+  "scripts": {
+    "lint": "eslint --fix src",
+    "test": "yarn test:node && yarn test:wasm",
+    "test:node": "yarn node --experimental-vm-modules $(yarn bin jest)",
+    "test:wasm": "serve",
+    "coverage": "yarn node --experimental-vm-modules ./node_modules/.bin/jest --coverage"
+  }
+}
